@@ -25,7 +25,18 @@ export const NewProductsPage = () => {
       <p>New products introduced this year</p>
       <hr />
       {products.map((product) => (
-        <ProductCard key={product.title} title={product.title} subtitle={product.subtitle} description={product.description} />
+        <ProductCard
+          key={product.title}
+          title={product.title}
+          subtitle={product.subtitle}
+          description={product.description}
+          onDetails={() => {
+            console.log('New products details clicked');
+          }}
+          onBuy={() => {
+            console.log('New products buy clicked');
+          }}
+        />
       ))}
     </div>
   );

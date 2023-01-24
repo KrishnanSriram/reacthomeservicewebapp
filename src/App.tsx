@@ -10,6 +10,9 @@ import { NoMatchPage } from './pages/nomatch';
 import { ProductListPage } from './pages/products/list';
 import { NewProductsPage } from './pages/products/newproducts';
 import { FeaturedProductsPage } from './pages/products/featuredproducts';
+import { ServiceListPage } from './pages/services/list';
+import { ServiceDetailsPage } from './pages/services/details';
+import { ProductDetailsPage } from './pages/products/details';
 
 function App() {
   return (
@@ -26,6 +29,9 @@ function App() {
           <Route path="newproducts" element={<NewProductsPage />} />
           <Route path="featuredproducts" element={<FeaturedProductsPage />} />
         </Route>
+        <Route path="/products/details" element={<ProductDetailsPage />} />
+        <Route path="/services" element={<ServiceListPage />} />
+        <Route path="/services/details" element={<ServiceDetailsPage />} />
         <Route path="*" element={<NoMatchPage />} />
       </Routes>
     </div>
