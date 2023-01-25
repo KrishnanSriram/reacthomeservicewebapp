@@ -1,5 +1,4 @@
 import { useParams } from 'react-router-dom';
-import { Text } from '@fluentui/react-components';
 import { makeStyles, Button } from '@fluentui/react-components';
 import { ApprovalsApp24Regular, Headphones24Filled, WalletCreditCard24Regular, CalendarMonth24Regular } from '@fluentui/react-icons';
 import './details.css';
@@ -10,7 +9,7 @@ const useStyles = makeStyles({
     display: 'flex',
   },
 });
-  
+
 export const ProductDetailsPage = () => {
   let { id } = useParams();
   const styles = useStyles();
