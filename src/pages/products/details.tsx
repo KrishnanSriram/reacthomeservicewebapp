@@ -10,7 +10,7 @@ const useStyles = makeStyles({
     display: 'flex',
   },
 });
-
+  
 export const ProductDetailsPage = () => {
   let { id } = useParams();
   const styles = useStyles();
