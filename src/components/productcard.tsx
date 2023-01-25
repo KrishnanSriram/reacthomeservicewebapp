@@ -1,4 +1,4 @@
-import { makeStyles, shorthands, Button, Caption1, Text, tokens, Subtitle1, Menu, MenuTrigger, MenuPopover, MenuList, MenuItem } from '@fluentui/react-components';
+import { makeStyles, shorthands, Button, Caption1, Text, tokens, Menu, MenuTrigger, MenuPopover, MenuList, MenuItem } from '@fluentui/react-components';
 import { Card, CardHeader } from '@fluentui/react-components/unstable';
 
 import * as React from 'react';
