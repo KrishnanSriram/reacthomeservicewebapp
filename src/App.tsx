@@ -29,7 +29,7 @@ function App() {
           <Route path="newproducts" element={<NewProductsPage />} />
           <Route path="featuredproducts" element={<FeaturedProductsPage />} />
         </Route>
-        <Route path="/products/details" element={<ProductDetailsPage />} />
+        <Route path="/products/details/:id" element={<ProductDetailsPage />} />
         <Route path="/services" element={<ServiceListPage />} />
         <Route path="/services/details" element={<ServiceDetailsPage />} />
         <Route path="*" element={<NoMatchPage />} />

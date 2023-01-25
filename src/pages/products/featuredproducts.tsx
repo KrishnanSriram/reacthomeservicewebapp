@@ -5,16 +5,19 @@ export const FeaturedProductsPage = () => {
   const navigate = useNavigate();
   const products = [
     {
+      id: 1,
       title: 'Title 1',
       subtitle: 'More info about title 1',
       description: 'Donut chocolate bar oat cake. Dragée tiramisu lollipop bear claw. Marshmallow pastry jujubes toffee sugar plum.',
     },
     {
+      id: 2,
       title: 'Title 2',
       subtitle: 'More info about title 2',
       description: 'Donut chocolate bar oat cake. Dragée tiramisu lollipop bear claw. Marshmallow pastry jujubes toffee sugar plum.',
     },
     {
+      id: 3,
       title: 'Title 3',
       subtitle: 'More info about title 3',
       description: 'Donut chocolate bar oat cake. Dragée tiramisu lollipop bear claw. Marshmallow pastry jujubes toffee sugar plum.',
@@ -33,7 +36,7 @@ export const FeaturedProductsPage = () => {
           description={product.description}
           onDetails={() => {
             console.log('Featured products details Clicked');
-            navigate('/products/details?title=' + product.title);
+            navigate('/products/details/' + product.id);
           }}
           onBuy={() => {
             console.log('Featured products buy clicked');
