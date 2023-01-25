@@ -38,14 +38,14 @@ const useStyles = makeStyles({
     ...shorthands.margin(0),
   },
 });
-const Title = ({ children }: React.PropsWithChildren<{}>) => {
-  const styles = useStyles();
-  return (
-    <Subtitle1 as="h4" block className={styles.title}>
-      {children}
-    </Subtitle1>
-  );
-};
+// const Title = ({ children }: React.PropsWithChildren<{}>) => {
+//   const styles = useStyles();
+//   return (
+//     <Subtitle1 as="h4" block className={styles.title}>
+//       {children}
+//     </Subtitle1>
+//   );
+// };
 
 type ProductCardProps = {
   title: string;
