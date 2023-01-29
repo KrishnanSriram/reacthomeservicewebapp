@@ -1,37 +1,18 @@
 import { ProductCard } from '../../components/productcard';
 import { useNavigate } from 'react-router-dom';
+import { ProductsData } from './data';
 
 export const FeaturedProductsPage = () => {
   const navigate = useNavigate();
-  const products = [
-    {
-      id: 1,
-      title: 'Title 1',
-      subtitle: 'More info about title 1',
-      description: 'Donut chocolate bar oat cake. Dragée tiramisu lollipop bear claw. Marshmallow pastry jujubes toffee sugar plum.',
-    },
-    {
-      id: 2,
-      title: 'Title 2',
-      subtitle: 'More info about title 2',
-      description: 'Donut chocolate bar oat cake. Dragée tiramisu lollipop bear claw. Marshmallow pastry jujubes toffee sugar plum.',
-    },
-    {
-      id: 3,
-      title: 'Title 3',
-      subtitle: 'More info about title 3',
-      description: 'Donut chocolate bar oat cake. Dragée tiramisu lollipop bear claw. Marshmallow pastry jujubes toffee sugar plum.',
-    },
-  ];
   return (
     <div>
       <h2>Feature products</h2>
       <p>A special lineup of products assembled just for you, based on your needs</p>
       <hr />
-      {products.map((product) => (
+      {ProductsData.map((product) => (
         <ProductCard
           key={product.title}
-          title={product.title}
+          title={product.title + '\t - \t' + product.price}
           subtitle={product.subtitle}
           description={product.description}
           onDetails={() => {

@@ -17,7 +17,10 @@ export const ProductDetailsPage = () => {
   return (
     <div>
       <h2>Product Details</h2>
-      <p className="title">Product details for - {id}</p>
+      <div className="title">
+        <p>Product details - {id}</p>
+        
+      </div>
       <div className="container">
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl pretium fusce id velit ut tortor. Leo vel fringilla est ullamcorper. Eget est lorem ipsum dolor sit amet consectetur adipiscing elit. In
