@@ -2,5 +2,12 @@
   "globalHeaders": {
     "Access-Control-Allow-Origin": "https://team13webapp.azurewebsites.net",
     "Access-Control-Allow-Methods": "POST, GET, OPTIONS"
+  },
+  "navigationFallback": {
+    "rewrite": "index.html",
+    "exclude": ["/static/media/*.{png,jpg,jpeg,gif,bmp}", "/static/css/*"]
+  },
+  "mimeTypes": {
+    ".json": "text/json"
   }
 }
