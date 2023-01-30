@@ -12,6 +12,7 @@ import { FeaturedProductsPage } from './pages/products/featuredproducts';
 import { ServiceListPage } from './pages/services/list';
 import { ServiceDetailsPage } from './pages/services/details';
 import { ProductDetailsPage } from './pages/products/details';
+import CartPage from './pages/cart/cart';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/comments" element={<CommentsPage />} />
+        <Route path="/cart" element={<CartPage />} />
         <Route path="/products" element={<ProductListPage />}>
           <Route index element={<FeaturedProductsPage />} />
           <Route path="newproducts" element={<NewProductsPage />} />
