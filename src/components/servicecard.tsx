@@ -3,6 +3,8 @@ import { Card, CardHeader } from '@fluentui/react-components/unstable';
 
 import * as React from 'react';
 import { MoreHorizontal20Filled } from '@fluentui/react-icons';
+import SunLogo from './sun.svg';
+
 const resolveAsset = (asset: string) => {
   const ASSET_URL = 'https://raw.githubusercontent.com/microsoft/fluentui/master/packages/react-components/react-card/stories/assets/';
   return `${ASSET_URL}${asset}`;
@@ -31,6 +33,11 @@ const useStyles = makeStyles({
     maxWidth: '42px',
     maxHeight: '42px',
   },
+  defaultCardImage: {
+    ...shorthands.borderRadius('4px'),
+    maxWidth: '32px',
+    maxHeight: '32px',
+  },
   caption: {
     color: tokens.colorNeutralForeground3,
   },
@@ -54,12 +61,19 @@ export const ServiceCard = (props: ServiceCardProps) => {
         <Card className={styles.verticalCard}>
           <CardHeader
             image={<img alt="app logo" src={resolveAsset('app_logo.svg')} className={styles.headerImage} />}
-            header={<Text weight="semibold">{props.title}</Text>}
+            header={
+              <div>
+                <Text weight="semibold">{props.title}</Text>
+              </div>
+            }
             description={<Caption1 className={styles.caption}>{props.subtitle}</Caption1>}
             action={
               <Menu>
                 <MenuTrigger disableButtonEnhancement>
-                  <Button appearance="transparent" icon={<MoreHorizontal20Filled />} aria-label="More options" />
+                  <div>
+                    {props.isDefault ? <img alt="app logo" src={SunLogo} className={styles.defaultCardImage} /> : <div />}
+                    <Button appearance="transparent" icon={<MoreHorizontal20Filled />} aria-label="More options" />
+                  </div>
                 </MenuTrigger>
                 <MenuPopover>
                   <MenuList>

@@ -15,7 +15,7 @@ export const ServiceListPage = () => {
           onSelect={() => {
             console.log('Featured products details Clicked');
           }}
-          isDefault={false}
+          isDefault={service.isDefault}
         />
       ))}
     </div>
